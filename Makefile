@@ -1,4 +1,7 @@
-.DEFAULT: null
+.DEFAULT: all
+.PHONY: all
+all: print
+
 .PHONY: null
 null:
 	@echo No default make target
@@ -12,10 +15,10 @@ venv: ${VENV}
 ${VENV}:
 	python3 -mvenv ${@}
 
-.PHONY: dev
-dev:
-	pip install -U pip setuptools wheel
-	pip install -U -r requirements.txt
+.PHONY: pip
+pip: ${VENV}
+	${VENV}/bin/pip install -U pip setuptools wheel
+	${VENV}/bin/pip install -U -r requirements.txt
 
 .PHONY: bootstrap
 bootstrap:
@@ -23,4 +26,8 @@ bootstrap:
 
 .PHONY: clean
 clean:
-	rm -rf ${VENV}
+	git clean -xfd
+
+
+print: pip
+	${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
