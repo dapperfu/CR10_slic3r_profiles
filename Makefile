@@ -29,5 +29,10 @@ clean:
 	git clean -xfd
 
 
-print: pip
+.PHONY: build
+build:
+	git checkout build
+	git checkout master unbundle.py Slic3r_config_bundle.ini
 	${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
+	git add filament print printer
+	git checkout master
