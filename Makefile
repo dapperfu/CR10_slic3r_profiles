@@ -1,6 +1,6 @@
 .DEFAULT: all
 .PHONY: all
-all: print
+all: build
 
 .PHONY: null
 null:
