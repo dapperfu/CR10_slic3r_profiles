@@ -31,10 +31,8 @@ clean:
 
 .PHONY: build
 build:
-	git checkout build
-	git checkout master unbundle.py Slic3r_config_bundle.ini
+	rm -rf filament print printer
 	${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
 	git add filament print printer
 	git commit -am "Build: `date`"
-	git checkout master
 	git push --all
