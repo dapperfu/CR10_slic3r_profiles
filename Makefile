@@ -26,7 +26,7 @@ bootstrap:
 
 .PHONY: clean
 clean:
-	git clean -xfd
+	git clean -fd
 
 
 .PHONY: build
