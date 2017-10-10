@@ -37,3 +37,4 @@ build:
 	git add filament print printer
 	git commit -am "Build: `date`"
 	git checkout master
+	git push --all
