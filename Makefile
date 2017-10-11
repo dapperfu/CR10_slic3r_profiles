@@ -35,4 +35,5 @@ build:
 	${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
 	git add filament print printer
 	git commit -am "Build: `date`"
-	git push --all
+	git push origin HEAD:master
+
