@@ -1,10 +1,10 @@
-.DEFAULT: all
-.PHONY: all
-all: build
-
+.DEFAULT: null
 .PHONY: null
 null:
 	@echo No default make target
+
+.PHONY: all
+all: build
 
 # Python targets
 VENV = .venv
@@ -30,7 +30,7 @@ clean:
 
 
 .PHONY: build
-build:
+build: ${VENV}
 	rm -rf filament print printer
 	${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
 	git add filament print printer
