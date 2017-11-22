@@ -1,12 +1,7 @@
-.DEFAULT: null
-.PHONY: null
-null:
-	@echo No default make target
-
+.DEFAULT: all
 .PHONY: all
 all: build
 
-# Python targets
 VENV = .venv
 
 .PHONY: venv
@@ -27,7 +22,6 @@ bootstrap:
 .PHONY: clean
 clean:
 	git clean -fd
-
 
 .PHONY: build
 build: ${VENV}
