@@ -8,12 +8,12 @@ VENV = .venv
 venv: ${VENV}
 
 ${VENV}:
-	python3 -mvenv ${@}
+	@python3 -mvenv ${@}
 
 .PHONY: pip
 pip: ${VENV}
-	${VENV}/bin/pip install -U pip setuptools wheel
-	${VENV}/bin/pip install -U -r requirements.txt
+	@${VENV}/bin/pip install -U pip setuptools wheel
+	@${VENV}/bin/pip install -U -r requirements.txt
 
 .PHONY: bootstrap
 bootstrap:
@@ -21,13 +21,13 @@ bootstrap:
 
 .PHONY: clean
 clean:
-	git clean -fd
+	@git clean -fd
 
 .PHONY: build
 build: ${VENV}
-	rm -rf filament print printer
-	${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
-	git add filament print printer
-	git commit -am "Build: `date`"
-	git push origin HEAD:master
+	@rm -rf filament print printer
+	@${VENV}/bin/python unbundle.py Slic3r_config_bundle.ini
+	@git add filament print printer
+	@git commit -am "Build: `date`"
+	@git push origin HEAD:master
 
