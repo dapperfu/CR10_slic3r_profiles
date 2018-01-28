@@ -9,11 +9,8 @@ venv: ${VENV}
 
 ${VENV}:
 	@python3 -mvenv ${@}
-
-.PHONY: pip
-pip: ${VENV}
-	@${VENV}/bin/pip install -U pip setuptools wheel
-	@${VENV}/bin/pip install -U -r requirements.txt
+	@${VENV}/bin/pip install --upgrade pip setuptools wheel
+	@${VENV}/bin/pip install --upgrade --requirement requirements.txt
 
 .PHONY: bootstrap
 bootstrap:
@@ -21,7 +18,10 @@ bootstrap:
 
 .PHONY: clean
 clean:
-	@git clean -fd
+	@git clean -xfd
+
+.PHONY: unbundle
+unbundle: build
 
 .PHONY: build
 build: ${VENV}
