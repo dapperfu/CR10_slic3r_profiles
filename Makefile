@@ -21,8 +21,8 @@ clean:
 	@git clean -xfd
 
 .PHONY: unbundle
-unbundle:
-	make build
+unbundle: build
+	make clean unbundle
 	make unbundle
 
 .PHONY: build
