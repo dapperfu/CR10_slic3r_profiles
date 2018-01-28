@@ -21,7 +21,9 @@ clean:
 	@git clean -xfd
 
 .PHONY: unbundle
-unbundle: build
+unbundle:
+	make build
+	make unbundle
 
 .PHONY: build
 build: ${VENV}
