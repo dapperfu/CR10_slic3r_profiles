@@ -22,8 +22,8 @@ clean:
 
 .PHONY: unbundle
 unbundle: build
-	make clean unbundle
-	make unbundle
+	make clean unbundle; if [ $$? -eq 0 ] ; then echo "no differences" ; fi
+
 
 .PHONY: build
 build: ${VENV}
