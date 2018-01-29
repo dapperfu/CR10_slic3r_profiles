@@ -44,4 +44,21 @@ or
 ## Unbundle Profiles.
 
 ``unbundle.py`` breaks apart  Slic3r_config_bundle.ini  into separate configuration files for each of the different Print, Filament & Printer Settings.
+
+    python unbundle.py  Slic3r_config_bundle.ini
     
+There is a make target that:
+1. Deletes existing settings.
+1. Unbundles ```Slic3r_config_bundle.ini```
+1. Adds settings back to git.
+1. Creates a commit based on the date.
+1. Pushes to origin.
+
+# Pt 2.
+
+The project can now be used as a submodule in another project to automatically generate g-code.
+
+See also:
+
+1. https://github.com/jed-frey/openscad
+2. https://github.com/jed-frey/3D_Prints
