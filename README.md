@@ -34,6 +34,14 @@ or
     - File > Export Config Bundle > Slic3r_config_bundle.ini > Replace
     - Alt +F - E - E - Enter - Enter - Enter
     
-### Unbundle Settings.
+#### Advanced Editing
+ 
+ 1. Open Slic3r_config_bundle.ini  with a text editor.
+ 2. Edit.
+ 3. Save.
+ 
+    
+## Unbundle Profiles.
 
+``unbundle.py`` breaks apart  Slic3r_config_bundle.ini  into separate configuration files for each of the different Print, Filament & Printer Settings.
     

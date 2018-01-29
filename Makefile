@@ -22,7 +22,7 @@ clean:
 
 .PHONY: unbundle
 unbundle: build
-	make clean unbundle; if [ $$? -eq 1 ] ; then echo "no differences" ; exit 0 ; fi
+	@make clean unbundle
 
 
 .PHONY: build
