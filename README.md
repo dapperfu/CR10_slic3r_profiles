@@ -47,7 +47,7 @@ or
 
     python unbundle.py  Slic3r_config_bundle.ini
     
-There is a make target that:
+``make build`` is a make target that:
 1. Deletes existing settings.
 1. Unbundles ```Slic3r_config_bundle.ini```
 1. Adds settings back to git.
