@@ -1,6 +1,6 @@
 # slic3r config
-FILAMENT ?= H250-B70
-PRINT ?= fine5
+FILAMENT ?= H210-B60
+PRINT ?= fine3_3
 PRINTER ?= CR10
 NOZZLE ?= 0.4
 PRINT_CENTER ?= 150,150
@@ -15,8 +15,8 @@ GCODE_PATH:=build/${PRINTER}-${NOZZLE}-${FILAMENT}
 GCODE_NAME:=-${PRINT}
 # Build gcode file path.
 GCODE:=$(patsubst %.stl, \
-			${GCODE_PATH}/%${GCODE_NAME}.gcode, \
-			${STL:./%=%})
+	${GCODE_PATH}/%${GCODE_NAME}.gcode, \
+	${STL:./%=%})
 
 # Determine the number of threads to use.
 THREADS?=$(shell grep -c ^processor /proc/cpuinfo)
