@@ -3,51 +3,49 @@ Slic3r profiles for my CR10.
 
 ## Usage
 
-### Cloning
+### Acquiring
 
-Tested on Ubuntu 16.04.
+Tested on Ubuntu 18.04
 
-    git clone https://github.com/jed-frey/slic3r_profiles.git
-    
-or
-   
-    git clone git@github.com:jed-frey/slic3r_profiles.git
-    
+1. ```git clone https://github.com/jed-frey/slic3r_profiles.git```
+2. ```wget https://github.com/jed-frey/slic3r_profiles/archive/master.zip && unzip master.zip```
+3. ```git clone git@github.com:jed-frey/slic3r_profiles.git```
+
 ### Setup
-    
-    cd slic3r_profiles/
+
+    cd slic3r_profiles*
     # Bootstrap apt-get based distros with python & slic3r
-    make bootstrap 
+    make bootstrap
     # Create the Python virtual environment.
     make venv
-    
+
 ### Edit profiles.
- 
+
 1. Launch slic3r.
     `slic3r --gui-mode=expert`
 2. Load Config Bundle.
-    - File > Load Config Bundle.
-    - Alt + F - L - Enter
+    - GUI: File > Load Config Bundle.
+    - KeyCombo: ```Alt+F``` - ```L``` - ```L``` - ```Enter```
 3. Modify Print, Filament & Printer Settings.
     Configure the profiles to match your machine.
 4. Export Config Bundle.
-    - File > Export Config Bundle > Slic3r_config_bundle.ini > Replace
-    - Alt +F - E - E - Enter - Enter - Enter
-    
+    - GUI: File > Export Config Bundle > Slic3r_config_bundle.ini > Replace
+    - KeyCombo: ```Alt+F``` - ```E``` - ```E``` - ```Enter``` - ```Enter``` - ```Enter```
+
 #### Advanced Editing
- 
+
  1. Open Slic3r_config_bundle.ini  with a text editor.
  2. Edit.
  3. Save.
- 
-    
+
 ## Unbundle Profiles.
 
-``unbundle.py`` breaks apart  Slic3r_config_bundle.ini  into separate configuration files for each of the different Print, Filament & Printer Settings.
+``unbundle.py`` breaks apart ```Slic3r_config_bundle.ini``` into separate configuration files for each of the different Print, Filament & Printer Settings.
 
-    python unbundle.py  Slic3r_config_bundle.ini
-    
+    .venv/bin/python3 unbundle.py Slic3r_config_bundle.ini
+
 ``make build`` is a make target that:
+
 1. Deletes existing settings.
 1. Unbundles ```Slic3r_config_bundle.ini```
 1. Adds settings back to git.
