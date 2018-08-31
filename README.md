@@ -15,7 +15,7 @@ or
     
 ### Setup
     
-    cd slic3r_proffliles
+    cd slic3r_profiles/
     # Bootstrap apt-get based distros with python & slic3r
     make bootstrap 
     # Create the Python virtual environment.
@@ -27,7 +27,7 @@ or
     `slic3r --gui-mode=expert`
 2. Load Config Bundle.
     - File > Load Config Bundle.
-    - Alt + F - L - L - Enter
+    - Alt + F - L - Enter
 3. Modify Print, Filament & Printer Settings.
     Configure the profiles to match your machine.
 4. Export Config Bundle.
