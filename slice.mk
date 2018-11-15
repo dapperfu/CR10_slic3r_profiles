@@ -1,6 +1,6 @@
 # slic3r config
 FILAMENT ?= H230-B70
-PRINT ?= fine5
+PRINT ?= coarse5
 PRINTER ?= CR10
 NOZZLE ?= 0.4
 PRINT_CENTER ?= 150,150
