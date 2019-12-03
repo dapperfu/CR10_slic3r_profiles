@@ -49,7 +49,7 @@ def unbundle_section(config_bundle, config, cfg_section):
         print(ini_body, file=fid)
 
 
-def unbundle(config_bundle=None):
+def slic3r_unbundle(config_bundle=None):
     if config_bundle is None:
         config_bundle = "Slic3r_config_bundle.ini"
 
@@ -66,4 +66,4 @@ def unbundle(config_bundle=None):
 
 if __name__ == '__main__':
     arguments = docopt(__doc__)
-    unbundle(config_bundle=arguments["<config_bundle>"])
+    slic3r_unbundle(config_bundle=arguments["<config_bundle>"])
