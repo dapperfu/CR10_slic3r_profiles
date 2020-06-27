@@ -10,11 +10,11 @@ Idealy, fork this for use with your own machine. Or you can use it directly.
 
 1. Clone directory:
 
-	git clone https://github.com/jed-frey/CR10_slic3r_profiles.git ~/.Slic3r
+	git clone https://github.com/dapperfu/CR10_slic3r_profiles.git ~/.Slic3r
 
 2. Open Slic3r.
 
 ### Usage
 
 1. Use Slic3r's GUI.
-2. Use [slic3r make tool](https://github.com/jed-frey/slic3r_make_tool).
+2. Use [slic3r make tool](https://github.com/dapperfu/slic3r_make_tool).
