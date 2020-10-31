@@ -1,4 +1,4 @@
-# CR10 Slic3r Profiles.
+# CR10 Slic3r / PrushaSlicer Profiles.
 
 Idealy, fork this for use with your own machine. Or you can use it directly.
 
@@ -11,6 +11,8 @@ Idealy, fork this for use with your own machine. Or you can use it directly.
 1. Clone directory:
 
 	git clone https://github.com/dapperfu/CR10_slic3r_profiles.git ~/.Slic3r
+	
+	git clone https://github.com/dapperfu/CR10_slic3r_profiles.git ~/.PrusaSlicer/
 
 2. Open Slic3r.
 
